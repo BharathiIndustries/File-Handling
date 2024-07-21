@@ -1,0 +1,28 @@
+from tkinter import *
+f  = open("test.txt","w")
+x = int(input("How many inputs do you want to give :"))
+
+for i in range(x):
+    na = str(input("Enter name :"))
+    f.write(na)
+    f.write("\n")
+f.flush()
+f.close()
+
+def add():
+    f  = open("test.txt","a")
+    w = "y"
+    while w == "y":
+        na = str(input("Enter name :"))
+        f.write(na)
+        f.write("\n")
+        w = str(input("Do you want to add data : "))
+
+add()
+with open("test.txt","r") as g:
+    print("Given data")
+    r = g.read()
+    root = Tk()
+    w = Label(root, text=r)
+    w.pack()
+    root.mainloop()
