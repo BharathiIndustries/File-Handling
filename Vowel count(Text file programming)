@@ -1,0 +1,13 @@
+print("Vowel count")
+vcou = 0
+ccon = 0
+with open("test.txt","r") as file:
+  for i in file:
+    for j in i:
+      if j in "AEIOUaeiou":
+        vcou = vcou +1
+      elif j not in " " and j.isalpha():
+        ccon = ccon +1
+print("Vowels count:",vcou)
+print("Consonents count:",ccon)
+file.close()
